@@ -1,0 +1,40 @@
+# .gitignore for DDoS Toolkit
+
+# Build outputs
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Logs
+*.log
+attack_log.json
+logs/
+
+# User files
+*.user
+*.suo
+*.userosscache
+
+# Visual Studio
+.vs/
+*.vspscc
+
+# Rider
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Backup files
+*.backup
+*.bak

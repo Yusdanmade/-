@@ -1,0 +1,100 @@
+<Window x:Class="NuclearDDoS_Ultimate_2025.MonitorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Real-Time Monitor" Height="400" Width="600"
+        WindowStartupLocation="CenterScreen" Background="#1e1e1e">
+    
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Header -->
+        <TextBlock Grid.Row="0" Text="📊 REAL-TIME MONITOR" 
+                   FontSize="20" FontWeight="Bold" Foreground="White" 
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+        
+        <!-- Content -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                
+                <!-- Statistics -->
+                <Border Background="#2d2d30" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                    <StackPanel>
+                        <TextBlock Text="📊 GENEL İSTATİSTİKLER" Foreground="White" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="Toplam İstek:" Foreground="White" FontSize="12"/>
+                                <TextBlock x:Name="TotalRequestsLabel" Text="0" Foreground="#00cc66" FontSize="16" FontWeight="Bold"/>
+                                
+                                <TextBlock Text="Başarılı:" Foreground="White" FontSize="12" Margin="0,10,0,0"/>
+                                <TextBlock x:Name="SuccessfulRequestsLabel" Text="0" Foreground="#00cc66" FontSize="16" FontWeight="Bold"/>
+                                
+                                <TextBlock Text="Başarısız:" Foreground="White" FontSize="12" Margin="0,10,0,0"/>
+                                <TextBlock x:Name="FailedRequestsLabel" Text="0" Foreground="#cc3333" FontSize="16" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Text="Başarı Oranı:" Foreground="White" FontSize="12"/>
+                                <TextBlock x:Name="SuccessRateLabel" Text="0%" Foreground="#ff9900" FontSize="16" FontWeight="Bold"/>
+                                
+                                <TextBlock Text="İstek/Saniye:" Foreground="White" FontSize="12" Margin="0,10,0,0"/>
+                                <TextBlock x:Name="RPSLabel" Text="0" Foreground="#ff9900" FontSize="16" FontWeight="Bold"/>
+                                
+                                <TextBlock Text="Bant Genişliği:" Foreground="White" FontSize="12" Margin="0,10,0,0"/>
+                                <TextBlock x:Name="BandwidthLabel" Text="0 MB" Foreground="#ff9900" FontSize="16" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                
+                <!-- System Stats -->
+                <Border Background="#2d2d30" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                    <StackPanel>
+                        <TextBlock Text="🖥️ SİSTEM İSTATİSTİKLERİ" Foreground="White" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="Aktif Thread:" Foreground="White" FontSize="12"/>
+                                <TextBlock x:Name="ThreadsLabel" Text="0" Foreground="#00cc66" FontSize="16" FontWeight="Bold"/>
+                                
+                                <TextBlock Text="Aktif Bağlantı:" Foreground="White" FontSize="12" Margin="0,10,0,0"/>
+                                <TextBlock x:Name="ConnectionsLabel" Text="0" Foreground="#00cc66" FontSize="16" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Text="CPU Kullanımı:" Foreground="White" FontSize="12"/>
+                                <TextBlock x:Name="CPULabel" Text="0%" Foreground="#ff9900" FontSize="16" FontWeight="Bold"/>
+                                
+                                <TextBlock Text="Memory Kullanımı:" Foreground="White" FontSize="12" Margin="0,10,0,0"/>
+                                <TextBlock x:Name="MemoryLabel" Text="0 MB" Foreground="#ff9900" FontSize="16" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                
+            </StackPanel>
+        </ScrollViewer>
+        
+        <!-- Footer -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button x:Name="RefreshButton" Content="🔄 Yenile" Width="80" Height="35" Margin="5"
+                   Background="#2d2d30" Foreground="White" BorderBrush="#3f3f46" 
+                   FontWeight="Bold" Click="RefreshButton_Click"/>
+            <Button x:Name="ExportButton" Content="💾 Dışa Aktar" Width="100" Height="35" Margin="5"
+                   Background="#2d2d30" Foreground="White" BorderBrush="#3f3f46" 
+                   FontWeight="Bold" Click="ExportButton_Click"/>
+            <Button x:Name="CloseButton" Content="❌ Kapat" Width="80" Height="35" Margin="5"
+                   Background="#cc3333" Foreground="White" BorderBrush="#aa1111" 
+                   FontWeight="Bold" Click="CloseButton_Click"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

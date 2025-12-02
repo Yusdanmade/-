@@ -1,0 +1,465 @@
+<Window x:Class="NuclearDDoS_Ultimate_2025.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="🚀 NUCLEAR DDoS ULTIMATE 2025 - GLOBAL DESTROYER" Height="800" Width="1200"
+        WindowStartupLocation="CenterScreen" Background="#0a0a0a" ResizeMode="CanResize"
+        WindowState="Maximized">
+    
+    <Window.Resources>
+        <!-- Animasyonlu Buton Stili -->
+        <Style x:Key="NuclearButton" TargetType="Button">
+            <Setter Property="Background" Value="#1a1a1a"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#ff3333"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="20,12"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="ButtonBorder"
+                                                      Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                      To="#ff3333" Duration="0:0:0.3"/>
+                                        <ColorAnimation Storyboard.TargetName="ButtonBorder"
+                                                      Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                      To="#ff6666" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="ButtonBorder"
+                                                      Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                      To="#1a1a1a" Duration="0:0:0.3"/>
+                                        <ColorAnimation Storyboard.TargetName="ButtonBorder"
+                                                      Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                      To="#ff3333" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Click">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                         Storyboard.TargetProperty="(Border.RenderTransform).(ScaleTransform.ScaleX)"
+                                                         To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                                        <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                         Storyboard.TargetProperty="(Border.RenderTransform).(ScaleTransform.ScaleY)"
+                                                         To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!-- Neon TextBox Stili -->
+        <Style x:Key="NeonTextBox" TargetType="TextBox">
+            <Setter Property="Background" Value="#1a1a1a"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#00ffff"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="12"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border x:Name="Border" Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8">
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="GotFocus">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="Border"
+                                                      Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                      To="#ff00ff" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="LostFocus">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="Border"
+                                                      Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                      To="#00ffff" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!-- Neon ComboBox Stili -->
+        <Style x:Key="NeonComboBox" TargetType="ComboBox">
+            <Setter Property="Background" Value="#1a1a1a"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#00ff00"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="12"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        
+        <!-- Neon Label Stili -->
+        <Style x:Key="NeonLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="#00ffff"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#00ffff" BlurRadius="5" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!-- Pulse Animasyonu -->
+        <Storyboard x:Key="PulseAnimation" RepeatBehavior="Forever">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                           From="0.3" To="1" Duration="0:0:1" AutoReverse="True"/>
+        </Storyboard>
+        
+        <!-- Glow Animasyonu -->
+        <Storyboard x:Key="GlowAnimation" RepeatBehavior="Forever">
+            <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                           From="#ff3333" To="#ffff00" Duration="0:0:2" AutoReverse="True"/>
+        </Storyboard>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Animasyonlu Header -->
+        <Border Grid.Row="0" Background="#1a1a1a" Padding="20" BorderBrush="#ff3333" BorderThickness="0,0,0,2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="🚀" FontSize="32" Margin="0,0,15,0" VerticalAlignment="Center">
+                    <TextBlock.Triggers>
+                        <EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard Storyboard="{StaticResource PulseAnimation}"/>
+                        </EventTrigger>
+                    </TextBlock.Triggers>
+                </TextBlock>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="NUCLEAR DDoS ULTIMATE 2025" FontSize="28" FontWeight="Bold" 
+                              Foreground="#ff3333" VerticalAlignment="Center">
+                        <TextBlock.Effect>
+                            <DropShadowEffect Color="#ff3333" BlurRadius="10" ShadowDepth="3"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <TextBlock Text="🌍 GLOBAL DESTROYER - BYPASS EVERYTHING 🌍" FontSize="16" 
+                              Foreground="#ffff00" FontWeight="Bold" VerticalAlignment="Center">
+                        <TextBlock.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard Storyboard="{StaticResource GlowAnimation}"/>
+                            </EventTrigger>
+                        </TextBlock.Triggers>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        
+        <!-- Ana İçerik -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <!-- 🎯 TARGET SECTION -->
+                <Border Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" 
+                       Background="#1a1a1a" CornerRadius="15" Padding="20" Margin="10"
+                       BorderBrush="#00ffff" BorderThickness="2">
+                    <StackPanel>
+                        <Label Content="🎯 GLOBAL TARGET SYSTEM" Style="{StaticResource NeonLabel}" FontSize="20"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="TargetTextBox" Style="{StaticResource NeonTextBox}" 
+                                     Height="40" Text="https://example.com" FontSize="16"/>
+                            <Button Grid.Column="1" x:Name="ScanButton" Content="🔍 SCAN" 
+                                   Style="{StaticResource NuclearButton}" Height="40" Click="ScanButton_Click"/>
+                        </Grid>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <CheckBox x:Name="AutoDiscoverCheckBox" Content="Auto-Discover Subdomains" 
+                                     Foreground="#00ffff" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="PortScanCheckBox" Content="Port Scan" 
+                                     Foreground="#00ffff" FontSize="12" FontWeight="Bold" IsChecked="True" Margin="20,0,0,0"/>
+                            <CheckBox x:Name="CloudflareBypassCheckBox" Content="Cloudflare Bypass" 
+                                     Foreground="#ff00ff" FontSize="12" FontWeight="Bold" IsChecked="True" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                
+                <!-- ⚡ ATTACK MODES -->
+                <Border Grid.Column="0" Grid.Row="1" 
+                       Background="#1a1a1a" CornerRadius="15" Padding="20" Margin="10"
+                       BorderBrush="#ff00ff" BorderThickness="2">
+                    <StackPanel>
+                        <Label Content="⚡ ATTACK MODES" Style="{StaticResource NeonLabel}" FontSize="18"/>
+                        <ComboBox x:Name="AttackModeComboBox" Style="{StaticResource NeonComboBox}" Height="40" FontSize="14">
+                            <ComboBoxItem Content="🔥 NUCLEAR STRIKE (Complete Destruction)" Tag="NuclearStrike" IsSelected="True"/>
+                            <ComboBoxItem Content="💀 OBLITERATION MODE (Total Annihilation)" Tag="Obliteration"/>
+                            <ComboBoxItem Content="🌊 TSUNAMI FLOOD (Massive Wave)" Tag="Tsunami"/>
+                            <ComboBoxItem Content="🌪️ HURRICANE ATTACK (Rotating Destruction)" Tag="Hurricane"/>
+                            <ComboBoxItem Content="☄️ METEOR STRIKE (Impact Devastation)" Tag="Meteor"/>
+                            <ComboBoxItem Content="🚨 GLOBAL BOTNET (Worldwide Attack)" Tag="GlobalBotnet"/>
+                            <ComboBoxItem Content="👻 PHANTOM MODE (Invisible Attack)" Tag="Phantom"/>
+                            <ComboBoxItem Content="⚡ LIGHTNING STRIKE (Instant Kill)" Tag="Lightning"/>
+                            <ComboBoxItem Content="🔥 INFERNO MODE (Hell Fire)" Tag="Inferno"/>
+                            <ComboBoxItem Content="💥 APOCALYPSE (End of Days)" Tag="Apocalypse"/>
+                        </ComboBox>
+                    </StackPanel>
+                </Border>
+                
+                <!-- 🚀 POWER LEVELS -->
+                <Border Grid.Column="1" Grid.Row="1" 
+                       Background="#1a1a1a" CornerRadius="15" Padding="20" Margin="10"
+                       BorderBrush="#ffff00" BorderThickness="2">
+                    <StackPanel>
+                        <Label Content="🚀 POWER LEVELS" Style="{StaticResource NeonLabel}" FontSize="18"/>
+                        <ComboBox x:Name="PowerLevelComboBox" Style="{StaticResource NeonComboBox}" Height="40" FontSize="14">
+                            <ComboBoxItem Content="💪 PLANETARY (Destroy Planets)" Tag="Planetary" IsSelected="True"/>
+                            <ComboBoxItem Content="🌟 STELLAR (Star Destroyer)" Tag="Stellar"/>
+                            <ComboBoxItem Content="🌌 GALACTIC (Galaxy Annihilator)" Tag="Galactic"/>
+                            <ComboBoxItem Content="🌌 UNIVERSAL (Universe Ender)" Tag="Universal"/>
+                            <ComboBoxItem Content="⚛️ QUANTUM (Quantum Collapse)" Tag="Quantum"/>
+                            <ComboBoxItem Content="🔥 INFINITE (Infinite Power)" Tag="Infinite"/>
+                            <ComboBoxItem Content="💥 OMEGA (Ultimate Destruction)" Tag="Omega"/>
+                            <ComboBoxItem Content="👑 GOD MODE (Divine Power)" Tag="GodMode"/>
+                            <ComboBoxItem Content="🌈 TRANSCENDENT (Beyond Reality)" Tag="Transcendent"/>
+                        </ComboBox>
+                    </StackPanel>
+                </Border>
+                
+                <!-- 🛡️ EVASION TECHNIQUES -->
+                <Border Grid.Column="2" Grid.Row="1" 
+                       Background="#1a1a1a" CornerRadius="15" Padding="20" Margin="10"
+                       BorderBrush="#00ff00" BorderThickness="2">
+                    <StackPanel>
+                        <Label Content="🛡️ EVASION TECHNIQUES" Style="{StaticResource NeonLabel}" FontSize="18"/>
+                        <StackPanel>
+                            <CheckBox x:Name="QuantumBypassCheckBox" Content="Quantum Bypass" 
+                                     Foreground="#00ff00" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="DimensionShiftCheckBox" Content="Dimension Shift" 
+                                     Foreground="#00ff00" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="TimeManipulationCheckBox" Content="Time Manipulation" 
+                                     Foreground="#00ff00" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="RealityBendingCheckBox" Content="Reality Bending" 
+                                     Foreground="#00ff00" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="ParallelUniverseCheckBox" Content="Parallel Universe" 
+                                     Foreground="#00ff00" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="MatrixGlitchCheckBox" Content="Matrix Glitch" 
+                                     Foreground="#00ff00" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                
+                <!-- 🌍 GLOBAL PROXY NETWORK -->
+                <Border Grid.Column="0" Grid.Row="2" 
+                       Background="#1a1a1a" CornerRadius="15" Padding="20" Margin="10"
+                       BorderBrush="#ff6600" BorderThickness="2">
+                    <StackPanel>
+                        <Label Content="🌍 GLOBAL PROXY NETWORK" Style="{StaticResource NeonLabel}" FontSize="18"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <Label Content="Proxy Type:" Foreground="#ff6600" FontSize="12" FontWeight="Bold"/>
+                                <ComboBox x:Name="ProxyTypeComboBox" Style="{StaticResource NeonComboBox}" Height="35" FontSize="12">
+                                    <ComboBoxItem Content="🌍 Elite Residential" Tag="EliteResidential" IsSelected="True"/>
+                                    <ComboBoxItem Content="🏢 Corporate" Tag="Corporate"/>
+                                    <ComboBoxItem Content="📱 Mobile" Tag="Mobile"/>
+                                    <ComboBoxItem Content="🛡️ Datacenter" Tag="Datacenter"/>
+                                    <ComboBoxItem Content="🌐 Global Mix" Tag="GlobalMix"/>
+                                </ComboBox>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <Label Content="Proxy Count:" Foreground="#ff6600" FontSize="12" FontWeight="Bold"/>
+                                <TextBox x:Name="ProxyCountTextBox" Style="{StaticResource NeonTextBox}" 
+                                         Height="35" Text="100000" FontSize="12"/>
+                            </StackPanel>
+                        </Grid>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <CheckBox x:Name="ProxyRotationCheckBox" Content="Auto Rotation" 
+                                     Foreground="#ff6600" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="ProxyChainingCheckBox" Content="Proxy Chaining" 
+                                     Foreground="#ff6600" FontSize="12" FontWeight="Bold" IsChecked="True" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                
+                <!-- 🧵 THREAD CONFIGURATION -->
+                <Border Grid.Column="1" Grid.Row="2" 
+                       Background="#1a1a1a" CornerRadius="15" Padding="20" Margin="10"
+                       BorderBrush="#ff0066" BorderThickness="2">
+                    <StackPanel>
+                        <Label Content="🧵 THREAD CONFIGURATION" Style="{StaticResource NeonLabel}" FontSize="18"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <Label Content="Threads:" Foreground="#ff0066" FontSize="12" FontWeight="Bold"/>
+                                <TextBox x:Name="ThreadsTextBox" Style="{StaticResource NeonTextBox}" 
+                                         Height="35" Text="1000000" FontSize="12"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <Label Content="Connections/Thread:" Foreground="#ff0066" FontSize="12" FontWeight="Bold"/>
+                                <TextBox x:Name="ConnectionsTextBox" Style="{StaticResource NeonTextBox}" 
+                                         Height="35" Text="10000" FontSize="12"/>
+                            </StackPanel>
+                        </Grid>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <CheckBox x:Name="InfiniteThreadsCheckBox" Content="Infinite Threads" 
+                                     Foreground="#ff0066" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="HyperThreadingCheckBox" Content="Hyper-Threading" 
+                                     Foreground="#ff0066" FontSize="12" FontWeight="Bold" IsChecked="True" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                
+                <!-- ⚙️ ADVANCED OPTIONS -->
+                <Border Grid.Column="2" Grid.Row="2" 
+                       Background="#1a1a1a" CornerRadius="15" Padding="20" Margin="10"
+                       BorderBrush="#6600ff" BorderThickness="2">
+                    <StackPanel>
+                        <Label Content="⚙️ ADVANCED OPTIONS" Style="{StaticResource NeonLabel}" FontSize="18"/>
+                        <StackPanel>
+                            <CheckBox x:Name="AIAdaptiveCheckBox" Content="AI Adaptive Attack" 
+                                     Foreground="#6600ff" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="MachineLearningCheckBox" Content="Machine Learning" 
+                                     Foreground="#6600ff" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="NeuralNetworkCheckBox" Content="Neural Network" 
+                                     Foreground="#6600ff" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="QuantumComputingCheckBox" Content="Quantum Computing" 
+                                     Foreground="#6600ff" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                            <CheckBox x:Name="TimeTravelCheckBox" Content="Time Travel Attack" 
+                                     Foreground="#6600ff" FontSize="12" FontWeight="Bold" IsChecked="True"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                
+                <!-- 🎮 CONTROL PANEL -->
+                <Border Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" 
+                       Background="#1a1a1a" CornerRadius="15" Padding="20" Margin="10"
+                       BorderBrush="#ff3333" BorderThickness="3">
+                    <StackPanel>
+                        <Label Content="🎮 CONTROL PANEL" Style="{StaticResource NeonLabel}" FontSize="20"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                            <Button x:Name="StartButton" Content="🚀 START GLOBAL DESTRUCTION" 
+                                   Style="{StaticResource NuclearButton}" Width="250" Height="60" FontSize="16" 
+                                   Background="#ff0000" BorderBrush="#ff6666" Click="StartButton_Click"/>
+                            <Button x:Name="StopButton" Content="⏹️ EMERGENCY STOP" 
+                                   Style="{StaticResource NuclearButton}" Width="200" Height="60" FontSize="16" 
+                                   Background="#ff6600" BorderBrush="#ffaa66" IsEnabled="False" Click="StopButton_Click"/>
+                            <Button x:Name="MonitorButton" Content="📊 REAL-TIME MONITOR" 
+                                   Style="{StaticResource NuclearButton}" Width="200" Height="60" FontSize="16" 
+                                   Background="#00ff00" BorderBrush="#66ff66" Click="MonitorButton_Click"/>
+                            <Button x:Name="NukeButton" Content="☢️ NUKE MODE" 
+                                   Style="{StaticResource NuclearButton}" Width="150" Height="60" FontSize="16" 
+                                   Background="#ff00ff" BorderBrush="#ff66ff" Click="NukeButton_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                
+                <!-- 📊 STATUS DISPLAY -->
+                <Border Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" 
+                       Background="#1a1a1a" CornerRadius="15" Padding="20" Margin="10"
+                       BorderBrush="#00ffff" BorderThickness="2">
+                    <StackPanel>
+                        <Label Content="📊 GLOBAL STATUS" Style="{StaticResource NeonLabel}" FontSize="18"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <Label Content="🎯 Target Status:" Foreground="#00ffff" FontSize="12" FontWeight="Bold"/>
+                                <Label x:Name="TargetStatusLabel" Content="READY" Foreground="#00ff00" FontSize="14" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <Label Content="⚡ Attack Power:" Foreground="#00ffff" FontSize="12" FontWeight="Bold"/>
+                                <Label x:Name="AttackPowerLabel" Content="0%" Foreground="#ffff00" FontSize="14" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2">
+                                <Label Content="🌍 Global Impact:" Foreground="#00ffff" FontSize="12" FontWeight="Bold"/>
+                                <Label x:Name="GlobalImpactLabel" Content="0%" Foreground="#ff00ff" FontSize="14" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="3">
+                                <Label Content="💥 Destruction Level:" Foreground="#00ffff" FontSize="12" FontWeight="Bold"/>
+                                <Label x:Name="DestructionLevelLabel" Content="0%" Foreground="#ff0000" FontSize="14" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                
+            </Grid>
+        </ScrollViewer>
+        
+        <!-- Footer -->
+        <Border Grid.Row="2" Background="#1a1a1a" Padding="15" BorderBrush="#ff3333" BorderThickness="0,2,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="StatusLabel" Content="🚀 READY FOR GLOBAL DESTRUCTION" 
+                       Style="{StaticResource NeonLabel}" FontSize="16" Grid.Column="0"/>
+                <Label x:Name="TimeLabel" Content="00:00:00" 
+                       Style="{StaticResource NeonLabel}" FontSize="16" Grid.Column="1"/>
+            </Grid>
+        </Border>
+        
+    </Grid>
+</Window>

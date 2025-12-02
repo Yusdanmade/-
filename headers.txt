@@ -1,0 +1,280 @@
+# 🌍 GLOBAL HEADERS DATABASE - 200+ Advanced Headers
+# 🚀 Ultimate DDoS Tool Headers Collection
+
+# 🔒 Security Headers
+X-Forwarded-Proto: https
+X-Forwarded-Host: example.com
+X-Real-IP: 127.0.0.1
+X-Cluster-Client-IP: 127.0.0.1
+X-Original-URL: /
+X-Rewrite-URL: /
+X-Original-Method: GET
+X-Method-Override: GET
+X-HTTP-Method-Override: GET
+X-Requested-With: XMLHttpRequest
+X-CSRF-Token: csrf-token-12345
+X-XSRF-Token: xsrf-token-67890
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Security-Policy: default-src 'self'
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# 📊 Request Tracking Headers
+X-Custom-Header: CustomValue
+X-Debug: true
+X-Trace-ID: trace123
+X-Request-ID: req456
+X-Session-ID: sess789
+X-Correlation-ID: corr-abc123
+X-Transaction-ID: trans-def456
+X-Request-Sequence: 1
+X-Request-Total: 100
+X-Batch-ID: batch-789
+X-Job-ID: job-456
+X-Task-ID: task-123
+X-Workflow-ID: workflow-789
+X-Process-ID: process-456
+X-Operation-ID: operation-123
+
+# 🖥️ Client Information Headers
+X-Client-Version: 1.0.0
+X-API-Version: v1
+X-Device-ID: device123
+X-Platform: web
+X-Browser: chrome
+X-OS: windows
+X-Country: US
+X-Language: en
+X-Timezone: UTC
+X-Referrer: google.com
+X-Source: organic
+X-Medium: search
+X-Campaign: campaign1
+X-Ad-Group: group1
+X-Keyword: keyword1
+X-Match-Type: broad
+X-Position: 1
+X-Network: google
+X-Device-Type: desktop
+X-OS-Version: 10
+X-Browser-Version: 91
+X-Screen-Resolution: 1920x1080
+X-Viewport: 1200x800
+X-Color-Depth: 24
+X-JavaScript: enabled
+X-Cookies: enabled
+X-Images: enabled
+X-CSS: enabled
+X-Flash: disabled
+X-Silverlight: disabled
+X-Java: disabled
+X-PDF: enabled
+X-QuickTime: disabled
+X-RealPlayer: disabled
+X-WMP: disabled
+X-ActiveX: disabled
+
+# 🌐 Browser Specific Headers
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+sec-ch-ua-arch: "x86"
+sec-ch-ua-bitness: "64"
+sec-ch-ua-model: ""
+sec-ch-ua-platform-version: "15.0.0"
+sec-ch-ua-wow64: ?0
+sec-fetch-dest: document
+sec-fetch-mode: navigate
+sec-fetch-site: none
+sec-fetch-user: ?1
+sec-fetch-storage-access: ?1
+sec-purpose: prefetch
+sec-gpc: 1
+Save-Data: on
+DNT: 1
+
+# 📱 Mobile Specific Headers
+X-Mobile-Detect: true
+X-Device-Memory: 8
+X-Device-Orientation: portrait
+X-Device-Pixel-Ratio: 2
+X-Device-Width: 375
+X-Device-Height: 667
+X-Device-Viewport-Width: 375
+X-Device-Viewport-Height: 667
+X-Device-DPR: 2
+X-Device-Color-Gamut: p3
+X-Device-Contrast: normal
+X-Device-Reduced-Motion: no-preference
+X-Device-Inverted-Colors: none
+X-Device-Forced-Colors: none
+X-Device-Monochrome: 0
+
+# 🎯 Performance Headers
+X-Performance-Timing: 123.45
+X-Server-Timing: miss, db;dur=53, app;dur=47.2
+X-Timing-Allow-Origin: *
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 999
+X-RateLimit-Reset: 1640995200
+X-RateLimit-Retry-After: 60
+X-RateLimit-Used: 1
+X-RateLimit-Cost: 1
+X-RateLimit-Burst: 100
+X-RateLimit-Window: 3600
+
+# 🔄 Cache Control Headers
+Cache-Control: no-cache, no-store, must-revalidate
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Cache-Control: public, max-age=31536000
+Cache-Control: private, max-age=3600
+Cache-Control: no-transform
+Cache-Control: proxy-revalidate
+Cache-Control: s-maxage=3600
+Cache-Control: immutable
+Cache-Control: stale-while-revalidate=60
+Cache-Control: stale-if-error=86400
+Pragma: no-cache
+Expires: 0
+ETag: "1234567890"
+Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+If-None-Match: "1234567890"
+If-Range: "1234567890"
+
+# 📤 Content Headers
+Content-Type: application/json
+Content-Type: application/xml
+Content-Type: text/html; charset=utf-8
+Content-Type: text/plain; charset=utf-8
+Content-Type: application/x-www-form-urlencoded
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Type: application/octet-stream
+Content-Type: image/jpeg
+Content-Type: image/png
+Content-Type: image/gif
+Content-Type: text/css
+Content-Type: application/javascript
+Content-Type: text/javascript
+Content-Type: application/pdf
+Content-Type: application/zip
+Content-Type: application/vnd.ms-excel
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+Content-Type: application/msword
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+Content-Length: 1024
+Content-Encoding: gzip
+Content-Encoding: deflate
+Content-Encoding: br
+Content-Language: en-US
+Content-Location: /index.html
+Content-MD5: d41d8cd98f00b204e9800998ecf8427e
+Content-Range: bytes 0-1023/2048
+Content-Disposition: inline; filename="example.txt"
+Content-Disposition: attachment; filename="example.txt"
+Content-Disposition: form-data; name="file"; filename="example.txt"
+
+# 🔗 Connection Headers
+Connection: keep-alive
+Connection: close
+Connection: upgrade
+Connection: TE
+Connection: Trailers
+Connection: Transfer-Encoding
+Keep-Alive: timeout=5, max=1000
+Keep-Alive: timeout=30, max=100
+Keep-Alive: timeout=60, max=1000
+Upgrade: websocket
+Upgrade: h2c
+Upgrade: h2
+TE: trailers, deflate
+TE: chunked
+Transfer-Encoding: chunked
+Transfer-Encoding: compress
+Transfer-Encoding: deflate
+Transfer-Encoding: gzip
+Trailer: Expires
+Trailer: Date
+Trailer: Server
+
+# 🌍 Geographic Headers
+X-GeoIP-Country: US
+X-GeoIP-Region: CA
+X-GeoIP-City: San Francisco
+X-GeoIP-Latitude: 37.7749
+X-GeoIP-Longitude: -122.4194
+X-GeoIP-Timezone: America/Los_Angeles
+X-GeoIP-Postal-Code: 94102
+X-GeoIP-ASN: AS8075 Microsoft Corporation
+X-GeoIP-Organization: Microsoft Corporation
+X-GeoIP-Continent: NA
+X-GeoIP-Metro-Code: 807
+X-GeoIP-Area-Code: 415
+
+# 🔐 Authentication Headers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Authorization: Digest username="admin", realm="test", nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093"
+Authorization: OAuth oauth_consumer_key="key", oauth_token="token", oauth_signature_method="HMAC-SHA1"
+Authorization: ApiKey abc123def456
+Authorization: Token abc123def456
+X-API-Key: abc123def456
+X-Auth-Token: abc123def456
+X-Access-Token: abc123def456
+X-Refresh-Token: abc123def456
+X-Session-Token: abc123def456
+X-CSRF-Token: abc123def456
+X-XSRF-Token: abc123def456
+X-Auth-User: admin
+X-Auth-Pass: password
+X-Auth-Email: user@example.com
+X-Auth-Phone: +1234567890
+
+# 📊 Analytics Headers
+X-Google-Analytics-ID: GA-123456789-1
+X-Facebook-Pixel-ID: 123456789012345
+X-Twitter-Pixel-ID: twtr-pixel-123
+X-LinkedIn-Partner-ID: 123456
+X-Mixpanel-Token: abc123def456
+X-Segment-Write-Key: abc123def456
+X-Amplitude-API-Key: abc123def456
+X-Hotjar-ID: 123456
+X-Clicky-ID: 123456
+X-Matomo-ID: 123
+X-Piwik-ID: 123
+
+# 🤖 Bot Detection Headers
+X-Bot-Detection: false
+X-Bot-Score: 0.1
+X-Bot-Confidence: 0.95
+X-Bot-Behavior: human
+X-Bot-Fingerprint: abc123def456
+X-Bot-Challenge: passed
+X-Bot-Verification: success
+X-Bot-Captcha: passed
+X-Bot-JS-Enabled: true
+X-Bot-Cookies-Enabled: true
+X-Bot-LocalStorage: true
+X-Bot-SessionStorage: true
+X-Bot-WebGL: true
+X-Bot-Canvas: true
+X-Bot-Audio: true
+X-Bot-Video: true
+X-Bot-WebRTC: true
+X-Bot-WebSocket: true
+X-Bot-Worker: true
+X-Bot-ServiceWorker: true
+X-Bot-Push: true
+X-Bot-Notification: true
+X-Bot-Geolocation: true
+X-Bot-Camera: true
+X-Bot-Microphone: true
+X-Bot-DeviceOrientation: true
+X-Bot-DeviceMotion: true
+X-Bot-Battery: true
+X-Bot-Vibration: true
+X-Bot-Proximity: true
+X-Bot-AmbientLight: true

@@ -1,0 +1,15 @@
+NuclearDDoS Ultimate 2025 - Monitor Export
+Export Time: 2.12.2025 21:03:33
+==================================================
+Total Requests: 888.346
+Successful Requests: 302.612
+Failed Requests: 585.734
+Success Rate: 34,1%
+Requests Per Second: 1.082
+Bandwidth Used: 213 MB
+Active Threads: 15
+Active Connections: 4967
+CPU Usage: 66%
+Memory Usage: 83 MB
+Recovery Status: Sistem stabil
+Log Status: Loglar aktif
